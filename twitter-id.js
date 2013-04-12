@@ -12,7 +12,7 @@ $(document).ready(function() {
 			tweet = tweets[i];
 			a_tag = $(tweet).children()[0];
 			user_id = $(a_tag).attr("data-user-id");
-			$(a_tag).append('<span>' + user_id + '</span>');
+			$(tweet).append('<div><small class="time"><br><br><span>User ID:</span><br><span class="tweet-id-user-id">' + user_id + '</span></small></div>');
 			$(tweet).attr("tweet-id-loaded", "true");
 		}
 
