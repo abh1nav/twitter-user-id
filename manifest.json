@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+
+  "name": "Inline Twitter User ID Display",
+  "description": "Displays the twitter user id of each user on twitter.com within tweet streams.",
+  "version": "0.1.0",
+
+  "permissions": [ "tabs", "http://*/*" ],
+  "content_scripts": [{
+        "all_frames": true,
+        "js": [ "jquery.min.js", "underscore.min.js", "twitter-id.js" ],
+        "matches": [ "http://twitter.com/*", "https://twitter.com/*", "http://www.twitter.com/*", "https://www.twitter.com/*" ] 
+  }]
+}
